@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #040d1a;
+  --color-navy-light: #071428;
+  --color-navy-card: #0a1628;
+  --color-carbon-dark: #030914;
+  --color-carbon-navy: #081426;
+  --color-f1-yellow: #f2e529;
+  --color-f1-red: #e10600;
+  --color-f1-purple: #b138dd;
+  --color-f1-white: #f0f0f0;
+  --color-f1-muted: #8899aa;
+}
+
+@layer base {
+  /* Complete Browser Scrollbar Elimination (Chrome, Safari, Firefox, Edge, IE) */
+  html, body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    @apply bg-navy text-f1-white font-sans antialiased selection:bg-f1-yellow selection:text-navy;
+  }
+
+  /* WebKit browsers (Chrome, Safari, Opera, newer Edge) */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* Custom telemetry helper utilities */
+.clip-chamfer-f1 {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-chamfer-pill {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
