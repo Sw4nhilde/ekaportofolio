@@ -23,34 +23,34 @@ export default function ToolsSection() {
   ];
 
   return (
-    <section id="tools" className="relative min-h-screen py-24 px-6 md:px-12 lg:px-24 bg-[#040d1a] text-[#f0f0f0] overflow-hidden">
+    <section id="tools" className="relative min-h-screen py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#040d1a] text-[#f0f0f0] overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#f2e529]/10 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#e10600]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-[#334155] pb-6 mb-12 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-[#334155] pb-6 mb-10 sm:mb-12 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f2e529]/10 border border-[#f2e529] text-[#f2e529] font-mono text-xs tracking-widest uppercase mb-3">
               <Cpu size={14} />
               <span>PIT-WALL SPECIFICATIONS // HARDWARE & SOFTWARE</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black italic tracking-tighter uppercase">
               TECH <span className="text-[#f2e529]">ARSENAL</span>
             </h2>
-            <p className="text-[#8899aa] font-mono text-sm mt-2 max-w-xl">
+            <p className="text-[#8899aa] font-mono text-xs sm:text-sm mt-2 max-w-xl font-light">
               Languages, neural architectures, frameworks, and deployment engines powering intelligent systems.
             </p>
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {filterOptions.map((opt) => (
               <button
                 key={opt.id}
                 onClick={() => setFilter(opt.id)}
-                className={`flex items-center gap-1.5 px-3.5 py-2 font-mono text-xs transition-all uppercase tracking-wider font-bold ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 font-mono text-[11px] sm:text-xs transition-all uppercase tracking-wider font-bold ${
                   filter === opt.id
                     ? 'bg-[#f2e529] text-[#040d1a] shadow-[0_0_15px_rgba(242,229,41,0.3)]'
                     : 'bg-[#0a1628] text-[#8899aa] border border-[#334155] hover:border-[#f2e529] hover:text-[#f0f0f0]'
@@ -75,7 +75,7 @@ export default function ToolsSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="bg-[#0a1628] border border-[#334155] hover:border-[#f2e529] p-6 transition-all duration-300 relative group flex flex-col justify-between"
+                className="bg-[#0a1628] border border-[#334155] hover:border-[#f2e529] p-5 sm:p-6 transition-all duration-300 relative group flex flex-col justify-between"
                 style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px))' }}
               >
                 <div>

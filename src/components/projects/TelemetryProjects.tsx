@@ -43,17 +43,17 @@ export default function TelemetryProjects() {
     <section 
       id="garage" 
       ref={sectionRef} 
-      className="bg-[#040d1a] py-24 px-6 md:px-12 lg:px-24"
+      className="bg-[#040d1a] py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-24"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <div className="inline-block px-3 py-1 bg-[#8899aa]/10 border border-[#8899aa]/30 text-[#8899aa] font-mono text-xs font-bold tracking-widest mb-4">
+        <div className="mb-10 sm:mb-12">
+          <div className="inline-block px-3 py-1 bg-[#8899aa]/10 border border-[#8899aa]/30 text-[#8899aa] font-mono text-xs font-bold tracking-widest mb-3 sm:mb-4">
             SECTOR DATA
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f0f0f0] mb-4 uppercase tracking-tighter">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#f0f0f0] mb-3 sm:mb-4 uppercase tracking-tighter">
             THE GARAGE
           </h2>
-          <p className="text-[#8899aa] max-w-2xl text-lg border-l-2 border-[#e10600] pl-4">
+          <p className="text-[#8899aa] max-w-2xl text-sm sm:text-lg border-l-2 border-[#e10600] pl-3 sm:pl-4 font-light">
             Project telemetry and performance data from the development pit wall.
           </p>
         </div>

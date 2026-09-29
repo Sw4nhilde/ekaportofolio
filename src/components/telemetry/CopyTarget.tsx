@@ -58,17 +58,17 @@ export default function CopyTarget({
       </div>
 
       {/* Main Content Readout */}
-      <div className="flex items-center justify-between w-full gap-3">
+      <div className="flex items-center justify-between w-full gap-2 sm:gap-3">
         <span
-          className={`text-xs md:text-sm font-black tracking-wide transition-colors ${
+          className={`text-[11px] sm:text-xs md:text-sm font-black tracking-wide transition-colors truncate ${
             copied ? 'text-[#b138dd]' : 'text-[#f0f0f0] group-hover:text-[#f2e529]'
           }`}
         >
-          {copied ? 'DELTA: 0.000s | COPIED TO CLIPBOARD' : displayValue || textToCopy}
+          {copied ? 'DELTA: 0.000s // COPIED TO CLIPBOARD' : displayValue || textToCopy}
         </span>
 
         <div
-          className={`p-1 border transition-colors ${
+          className={`p-1 border transition-colors shrink-0 ${
             copied
               ? 'bg-[#b138dd]/20 border-[#b138dd] text-[#b138dd]'
               : 'bg-[#030914] border-[#334155] text-[#8899aa] group-hover:border-[#f2e529] group-hover:text-[#f2e529]'

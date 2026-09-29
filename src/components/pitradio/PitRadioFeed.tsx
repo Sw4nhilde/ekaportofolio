@@ -112,14 +112,14 @@ export function PitRadioFeed({ newOptimisticMessage }: PitRadioFeedProps) {
       )}
       {messages.map((msg) => (
         <div key={msg.id} className="bg-[#0a1628] border-l-2 border-[#f2e529] p-4 flex flex-col space-y-2">
-          <div className="flex justify-between items-center">
-            <span className="text-[#f2e529] font-mono font-bold uppercase tracking-wider text-sm flex items-center gap-2">
-              <svg className="w-3 h-3 animate-pulse text-[#f2e529]" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5" /></svg>
-              {msg.callsign}
+          <div className="flex justify-between items-center gap-2">
+            <span className="text-[#f2e529] font-mono font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 truncate">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 animate-pulse text-[#f2e529] shrink-0" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5" /></svg>
+              <span className="truncate">{msg.callsign}</span>
             </span>
-            <span className="text-[#8899aa] text-xs font-mono">{getRelativeTime(msg.created_at)}</span>
+            <span className="text-[#8899aa] text-[11px] sm:text-xs font-mono shrink-0">{getRelativeTime(msg.created_at)}</span>
           </div>
-          <p className="text-[#f0f0f0] font-sans text-sm">{msg.message}</p>
+          <p className="text-[#f0f0f0] font-sans text-xs sm:text-sm break-words leading-relaxed font-light">{msg.message}</p>
         </div>
       ))}
     </div>

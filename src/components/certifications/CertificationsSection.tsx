@@ -8,27 +8,27 @@ import { playSwitchClick } from '@/lib/audio/soundEffects';
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="relative min-h-screen py-24 px-6 md:px-12 lg:px-24 bg-[#040d1a] text-[#f0f0f0] overflow-hidden">
+    <section id="certifications" className="relative min-h-screen py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-24 bg-[#040d1a] text-[#f0f0f0] overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#e10600]/5 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="border-b-2 border-[#334155] pb-6 mb-12">
+        <div className="border-b-2 border-[#334155] pb-6 mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f2e529]/10 border border-[#f2e529] text-[#f2e529] font-mono text-xs tracking-widest uppercase mb-3">
             <Award size={14} />
             <span>VERIFIED CREDENTIALS</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black italic tracking-tighter uppercase">
             ACCREDITATIONS & <span className="text-[#f2e529]">LICENCES</span>
           </h2>
-          <p className="text-[#8899aa] font-mono text-sm mt-2 max-w-xl">
+          <p className="text-[#8899aa] font-mono text-xs sm:text-sm mt-2 max-w-xl font-light">
             Verified technical competencies, deep learning certifications, and industry engineering credentials. Click any card to inspect the official PDF certificate.
           </p>
         </div>
 
         {/* Licence Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {certificationsData.map((cert: CertificationItem, idx: number) => (
             <motion.a
               key={cert.id}
@@ -40,7 +40,7 @@ export default function CertificationsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: (idx % 4) * 0.08, duration: 0.4 }}
-              className="bg-[#0a1628] border-2 border-[#334155] hover:border-[#f2e529] p-6 md:p-7 transition-all duration-300 relative group flex flex-col justify-between hover:shadow-[0_0_30px_rgba(242,229,41,0.18)] cursor-pointer"
+              className="bg-[#0a1628] border-2 border-[#334155] hover:border-[#f2e529] p-5 sm:p-7 transition-all duration-300 relative group flex flex-col justify-between hover:shadow-[0_0_30px_rgba(242,229,41,0.18)] cursor-pointer"
               style={{ clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px))' }}
               title={`Click to view certificate for ${cert.title}`}
             >
@@ -91,18 +91,18 @@ export default function CertificationsSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-black text-[#f0f0f0] group-hover:text-[#f2e529] transition-colors mb-2.5 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-[#f0f0f0] group-hover:text-[#f2e529] transition-colors mb-2 leading-snug">
                   {cert.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-xs md:text-sm font-sans text-[#cbd5e1] leading-relaxed mb-5 font-light">
+                <p className="text-xs sm:text-sm font-sans text-[#cbd5e1] leading-relaxed mb-4 sm:mb-5 font-light">
                   {cert.description}
                 </p>
               </div>
 
               {/* Bottom Footer: Skills Tags & Action Prompt */}
-              <div className="pt-4 border-t border-[#334155]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="pt-3 sm:pt-4 border-t border-[#334155]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3">
                 <div className="flex flex-wrap gap-1.5">
                   {cert.skills.map((skill) => (
                     <span

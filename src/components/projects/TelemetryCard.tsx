@@ -34,45 +34,45 @@ export default function TelemetryCard({ project }: TelemetryCardProps) {
   return (
     <div 
       onMouseEnter={playSwitchClick}
-      className="group relative bg-[#0a1628] border border-[#f2e529]/15 p-6 transition-all duration-300 hover:border-[#f2e529] hover:shadow-[0_0_20px_rgba(242,229,41,0.18)] flex flex-col h-full"
+      className="group relative bg-[#0a1628] border border-[#f2e529]/15 p-5 sm:p-6 transition-all duration-300 hover:border-[#f2e529] hover:shadow-[0_0_20px_rgba(242,229,41,0.18)] flex flex-col h-full"
       style={{
         clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px))'
       }}
     >
-      <div className="flex justify-between items-start mb-4">
-        <span className="font-mono text-xs text-[#8899aa] tracking-widest uppercase">
+      <div className="flex justify-between items-start gap-2 mb-3 sm:mb-4">
+        <span className="font-mono text-[11px] sm:text-xs text-[#8899aa] tracking-widest uppercase">
           {project.sector}
         </span>
-        <span className={`font-mono text-xs px-2.5 py-0.5 tracking-wider uppercase ${getStatusColor(project.status)}`}>
+        <span className={`font-mono text-[10px] sm:text-xs px-2 sm:px-2.5 py-0.5 tracking-wider uppercase shrink-0 ${getStatusColor(project.status)}`}>
           {project.status === 'WIP' ? 'WIP // IN DEV' : project.status}
         </span>
       </div>
 
-      <div className="mb-2 flex justify-between items-end">
-        <h3 className="text-2xl font-bold text-[#f0f0f0] group-hover:text-[#f2e529] transition-colors tracking-tight">
+      <div className="mb-2 flex justify-between items-end gap-2">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#f0f0f0] group-hover:text-[#f2e529] transition-colors tracking-tight">
           {project.name}
         </h3>
-        <span className={`font-mono text-sm font-bold tracking-wider ${getDeltaColor(project.status)}`}>
+        <span className={`font-mono text-xs sm:text-sm font-bold tracking-wider shrink-0 ${getDeltaColor(project.status)}`}>
           {project.delta}
         </span>
       </div>
 
-      <p className="text-[#8899aa] text-sm mb-6 flex-grow leading-relaxed font-light">
+      <p className="text-[#8899aa] text-xs sm:text-sm mb-5 sm:mb-6 flex-grow leading-relaxed font-light">
         {project.description}
       </p>
 
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5 sm:mb-6">
         {project.tech.map((t) => (
           <span 
             key={t} 
-            className="text-xs font-mono text-[#f0f0f0] border border-[#8899aa]/30 px-2 py-1 rounded-sm bg-[#040d1a]/60 group-hover:border-[#f2e529]/40 transition-colors"
+            className="text-[11px] sm:text-xs font-mono text-[#f0f0f0] border border-[#8899aa]/30 px-2 py-0.5 sm:py-1 rounded-sm bg-[#040d1a]/60 group-hover:border-[#f2e529]/40 transition-colors"
           >
             {t}
           </span>
         ))}
       </div>
 
-      <div className="flex gap-3 mt-auto">
+      <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 mt-auto">
         {project.liveUrl && (
           <a
             href={project.liveUrl}

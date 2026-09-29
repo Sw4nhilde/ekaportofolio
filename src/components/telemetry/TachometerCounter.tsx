@@ -66,22 +66,22 @@ export default function TachometerCounter({
   return (
     <div
       ref={containerRef}
-      className="bg-[#081426]/90 border border-[#334155] p-4 flex flex-col justify-between min-w-[140px] md:min-w-[160px] font-mono select-none group hover:border-[#f2e529] transition-all duration-300"
+      className="bg-[#081426]/90 border border-[#334155] p-3 sm:p-4 flex flex-col justify-between flex-1 min-w-[105px] sm:min-w-[140px] md:min-w-[160px] font-mono select-none group hover:border-[#f2e529] transition-all duration-300"
       style={{
         clipPath:
           'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
       }}
     >
       {/* Top Rev LED strip */}
-      <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#334155]/60">
-        <span className="text-[9px] text-[#8899aa] uppercase font-bold tracking-tighter">
+      <div className="flex items-center justify-between pb-1.5 sm:pb-2 mb-1.5 sm:mb-2 border-b border-[#334155]/60">
+        <span className="text-[8px] sm:text-[9px] text-[#8899aa] uppercase font-bold tracking-tighter">
           {rpm} RPM
         </span>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           {leds.map((led, i) => (
             <div
               key={i}
-              className={`w-1.5 h-1.5 rounded-[1px] transition-all duration-75 ${
+              className={`w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-[1px] transition-all duration-75 ${
                 led.lit ? `${led.color} ${led.shadow}` : 'bg-[#1e293b]'
               }`}
             />
@@ -90,13 +90,13 @@ export default function TachometerCounter({
       </div>
 
       {/* Counter Digits */}
-      <div className="text-3xl md:text-4xl font-black text-[#f2e529] tracking-tight group-hover:scale-105 transition-transform duration-200">
+      <div className="text-2xl sm:text-3xl md:text-4xl font-black text-[#f2e529] tracking-tight group-hover:scale-105 transition-transform duration-200">
         {String(count).padStart(2, '0')}
-        <span className="text-[#f0f0f0] text-xl ml-0.5">{suffix}</span>
+        <span className="text-[#f0f0f0] text-lg sm:text-xl ml-0.5">{suffix}</span>
       </div>
 
       {/* Label */}
-      <div className="text-[10px] md:text-[11px] text-[#8899aa] uppercase font-bold tracking-wider mt-1.5">
+      <div className="text-[9px] sm:text-[10px] md:text-[11px] text-[#8899aa] uppercase font-bold tracking-wider mt-1 sm:mt-1.5 line-clamp-1">
         {label}
       </div>
     </div>

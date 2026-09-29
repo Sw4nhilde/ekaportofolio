@@ -106,7 +106,7 @@ export default function MagneticButton({
       onMouseLeave={handleMouseLeave}
       style={{ x, y }}
       whileTap={{ scale: 0.96 }}
-      className="inline-block relative"
+      className={`relative ${className.includes('w-full') ? 'w-full block sm:inline-block sm:w-auto' : 'inline-block'}`}
     >
       {asAnchor && href ? (
         <a

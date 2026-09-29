@@ -70,7 +70,7 @@ export function PitRadioForm({ onOptimisticSubmit }: PitRadioFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`bg-[#081426] p-6 flex flex-col space-y-6 font-mono relative overflow-hidden border-2 transition-all duration-300 ${
+      className={`bg-[#081426] p-5 sm:p-6 flex flex-col space-y-5 sm:space-y-6 font-mono relative overflow-hidden border-2 transition-all duration-300 ${
         status === 'success'
           ? 'border-[#00ff00] shadow-[0_0_30px_rgba(0,255,0,0.3)]'
           : status === 'error'
@@ -99,7 +99,7 @@ export function PitRadioForm({ onOptimisticSubmit }: PitRadioFormProps) {
           value={callsign}
           onChange={(e) => setCallsign(e.target.value)}
           maxLength={50}
-          className="bg-[#030914] text-[#f0f0f0] border-b-2 border-[#334155] focus:border-[#f2e529] outline-none px-3 py-2 text-sm transition-colors uppercase font-mono"
+          className="bg-[#030914] text-[#f0f0f0] border-b-2 border-[#334155] focus:border-[#f2e529] outline-none px-3 py-2 text-base sm:text-sm transition-colors uppercase font-mono"
           placeholder="ENTER CALLSIGN (E.G. HAMILTON #44)..."
           disabled={status === 'loading' || status === 'success'}
         />
@@ -118,7 +118,7 @@ export function PitRadioForm({ onOptimisticSubmit }: PitRadioFormProps) {
           onChange={(e) => setMessage(e.target.value)}
           maxLength={500}
           rows={4}
-          className="bg-[#030914] text-[#f0f0f0] border-b-2 border-[#334155] focus:border-[#f2e529] outline-none px-3 py-2 text-sm transition-colors resize-none font-mono"
+          className="bg-[#030914] text-[#f0f0f0] border-b-2 border-[#334155] focus:border-[#f2e529] outline-none px-3 py-2 text-base sm:text-sm transition-colors resize-none font-mono"
           placeholder="TRANSMIT MESSAGE TO PIT WALL..."
           disabled={status === 'loading' || status === 'success'}
         />
