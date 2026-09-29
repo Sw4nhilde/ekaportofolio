@@ -97,7 +97,7 @@ export default function Navbar() {
 
           {/* CV Button */}
           <a
-            href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO_OPTIMIZED.pdf"
+            href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={playSwitchClick}
@@ -115,7 +115,7 @@ export default function Navbar() {
         {/* Mobile Hamburger Toggle */}
         <div className="lg:hidden flex items-center space-x-3">
           <a
-            href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO_OPTIMIZED.pdf"
+            href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="sm:hidden flex items-center space-x-1 bg-[#e10600] text-[#f0f0f0] px-2.5 py-1 font-mono text-[11px] font-bold"

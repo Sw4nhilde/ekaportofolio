@@ -78,7 +78,7 @@ export default function HeroSection() {
             <span>EXPLORE GARAGE</span>
           </MagneticButton>
 
-          <MagneticButton asAnchor href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO_OPTIMIZED.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="w-full sm:w-auto text-center justify-center">
+          <MagneticButton asAnchor href="/files/CV%20MUHAMMAD%20EKA%20MANDIRI%20SUJANTO.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="w-full sm:w-auto text-center justify-center">
             <Download size={15} />
             <span>DOWNLOAD CV</span>
           </MagneticButton>
